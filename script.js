@@ -23,3 +23,34 @@ accordionHeaders.forEach((header) => {
     }
   });
 });
+
+// -----menu-----
+const menuIcon = document.getElementById("menu_icon");
+const menuList = document.getElementById("menu");
+
+menuIcon.addEventListener("click", () => {
+  if (menuList.classList.contains("show")) {
+    // Hide menu
+    menuList.classList.remove("show");
+    setTimeout(() => {
+      menuList.style.display = "none";
+    }, 300); // match CSS transition duration
+
+    // Switch back to hamburger
+    menuIcon.classList.remove("ri-close-line");
+    menuIcon.classList.add("ri-menu-4-fill");
+  } else {
+    // Show menu
+    menuList.style.display = "block";
+    setTimeout(() => {
+      menuList.classList.add("show");
+    }, 10); // tiny delay to trigger transition
+
+    // Switch to close icon
+    menuIcon.classList.remove("ri-menu-4-fill");
+    menuIcon.classList.add("ri-close-line");
+  }
+});
+
+
+// -----shoplistdetails-----

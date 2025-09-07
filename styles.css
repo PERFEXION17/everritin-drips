@@ -247,7 +247,7 @@ footer .logo a {
     text-shadow: 1px 1px 1px;
 }
 
-footer span{
+footer span {
     font-size: .8rem;
     color: var(--accent_color);
     text-align: center;
@@ -297,48 +297,48 @@ footer span{
     outline: 2px solid var(--accent_color);
 }
 
-.links{
+.links {
     width: 100%;
     display: flex;
     gap: .5rem;
     flex-direction: column;
 }
 
-.links a{
+.links a {
     width: 100%;
     color: var(--accent_color);
     padding: .5rem 0;
     border-bottom: 1px solid var(--accent_color);
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
 }
 
-.contact h3{
+.contact h3 {
     color: var(--accent_color);
 }
 
-.contact a{
+.contact a {
     width: max-content;
     font-size: 1.5rem;
     color: var(--accent_color);
     transition: .5s;
 }
 
-.contact p{
+.contact p {
     font-size: 1.5rem;
     color: var(--accent_color);
 }
 
-.contact p span{
-    font-size: 1rem;
+.contact p span {
+    font-size: .8rem;
 }
 
-.contact a:hover{
+.contact a:hover {
     color: var(--neutral_color);
 }
 
@@ -413,9 +413,149 @@ footer span{
         width: 40%;
     }
 
-    .links a 
-    {
+    .links a {
         width: 50%;
     }
 
+}
+
+/* ------SHOP----- */
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo i{
+    color: var(--primary_color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu_list{
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.menu_list.show{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav ul li a {
+    font-family: var(--font_sec);
+    font-size: 1rem;
+    text-shadow: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+nav ul li a:active {
+    color: var(--accent_color);
+}
+
+main{
+    width: 100%;
+}
+
+#shoes h2{
+    margin: 1rem;
+    font-weight:600;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 1px var(--black);
+    position: relative;
+    display: inline-block;
+    color: var(--primary_color);
+}
+
+#shoes h2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    border-radius: .5rem;
+    background-color: var(--primary_color);
+    width: 100%;
+    margin: auto;
+}
+
+.card_con{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.card{
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.card:hover, :active{
+    box-shadow: 1px 1px 10px var(--accent_color);
+}
+
+.card_img{
+    margin: auto;
+    padding: .5rem;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: .5rem .5rem 0 0;
+}
+
+.card_img img{
+    width: 100%;
+}
+
+.card_txt{
+    font-size: 1.2rem;
+    padding: .5rem .5rem 0 .5rem;
+    font-weight: 600;
+}
+
+.card_price{
+    padding: 0 .5rem 1rem .5rem;
+    font-family: var(--font_price);
+}
+
+@media (min-width : 900px) {
+
+    .logo i{
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu_list {
+        display: flex;
+        opacity: 1;
+        transform: none;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        font-family: var(--font_sec);
+        font-size: 1rem;
+        text-shadow: none;
+        font-weight: 700;
+        transition: .3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent_color);
+    }
+
+    .card_con{
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
