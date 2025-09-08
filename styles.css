@@ -518,12 +518,14 @@ main{
     padding: .5rem .5rem 0 .5rem;
     font-weight: 600;
     font-family: var(--font_main);
+    color: var(--primary_color);
 }
 
 .card_price{
     padding: 0 .5rem 1rem .5rem;
     font-family: var(--font_price);
     font-weight: 500;
+    color: var(--primary_color);
 }
 
 @media (min-width : 900px) {
