@@ -447,7 +447,7 @@ footer span {
 
 nav ul li a {
     font-family: var(--font_sec);
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-shadow: 1px 1px 1px var(--black);
     font-weight: 700;
     transition: .3s;
