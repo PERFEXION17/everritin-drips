@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
 }
 
 body {
@@ -62,7 +63,7 @@ nav {
     padding: .5rem 2rem;
     width: 100%;
     background-color: rgba(255, 255, 255, .002);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
 }
 
 nav a {
@@ -183,6 +184,14 @@ nav a {
 .con_txt p {
     padding: .5rem 0;
     text-align: center;
+}
+
+#customer_care{
+    margin-top: 2rem;
+}
+
+#customer_care h2{
+    margin: 0 ;
 }
 
 .accordion {
@@ -451,6 +460,7 @@ nav ul li a {
     text-shadow: 1px 1px 1px var(--black);
     font-weight: 700;
     transition: .3s;
+    color: var(--primary_color);
 }
 
 nav ul li a:active {
@@ -461,7 +471,7 @@ main{
     width: 100%;
 }
 
-#shoes h2{
+.section_con h2{
     margin: 1rem;
     font-weight:600;
     font-size: 1.3rem;
@@ -471,7 +481,7 @@ main{
     color: var(--primary_color);
 }
 
-#shoes h2::before{
+.section_con h2::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -522,9 +532,14 @@ main{
 }
 
 .card_price{
-    padding: 0 .5rem 1rem .5rem;
+    padding: 0 .5rem;
     font-family: var(--font_price);
     font-weight: 500;
+    color: var(--primary_color);
+}
+
+.card_rating{
+    padding: 0 .5rem .5rem .5rem;
     color: var(--primary_color);
 }
 

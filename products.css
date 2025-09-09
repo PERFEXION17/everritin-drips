@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --primary_color: #1E3A8A;
+    --accent_color: #06B6D4;
+    --neutral_color: #F3F4F6;
+    --black: #000;
+    --font_main: "Poppins", sans-serif;
+    --font_sec: "Quicksand", sans-serif;
+    --font_price: "Roboto Mono", monospace;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+img{
+    width: 100%;
+}
+
+.product_con{
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+}
+
+.product_img{
+    padding: 1rem;
+    width: 100%;
+}
+
+.p_img_main{
+    display: flex;
+}
+
+.p_img_small{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.product_txt{
+    padding: 1rem;
+}
+
+.product_txt h2{
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent_color);
+    text-shadow: 1px 1px 1px;
+}
+
+.product_txt p{
+    font-size: .85rem;
+    color: var(--primary_color);
+    text-align: justify;
+    font-weight: 500;
+}
+
+.qty{
+    width: 50%;
+    margin: 1rem auto;
+    color: var(--primary_color);
+    font-weight: 500;
+}
+
+.qty input{
+    width: 50%;
+    font-family: var(--font_sec);
+    font-weight: 600;
+    border-radius: .25rem;
+    border: none;
+    outline: 1px solid var(--primary_color);
+    padding: 0 1rem;
+}
+
+.qty input:focus{
+    border: none;
+    outline: 2px solid var(--primary_color);
+}
+
+.select_con{
+    margin: 1rem auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.select{
+    font-family: var(--font_sec);
+    color: var(--primary_color);
+    font-weight: 500;
+    background-color: var(--neutral_color);
+    border-radius: .25rem;
+    outline: 1px solid var(--primary_color);
+    border: none;
+}
+
+.select option{
+    font-weight: 500;
+}
+
+.product_form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 0 2rem 0;
+}
+
+.form{
+    border-radius: .25rem;
+    border: none;
+    outline: 1px solid var(--primary_color);
+    padding: .25rem .5rem;
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.form:focus{
+    border: none;
+    outline: 2px solid var(--primary_color);
+}
+
+#pay-btn{
+    border: none;
+    font-family: var(--font_sec);
+    background-color: var(--accent_color);
+    margin: 1rem auto;
+    border-radius: .5rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    width: max-content;
+    color: var(--neutral_color);
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+#pay-btn:hover{
+    background-color: var(--primary_color);
+}
