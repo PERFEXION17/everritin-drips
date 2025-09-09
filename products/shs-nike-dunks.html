@@ -71,57 +71,71 @@
               </div>
             </div>
           </div>
-          <div class="product_txt">
-            <h2>NIKE LOW DUNKS</h2>
-            <p>
-              Step into timeless street style with the Nike Low Dunks. Designed
-              with premium leather, a cushioned sole, and a sleek low-cut
-              silhouette, these sneakers deliver all-day comfort and effortless
-              versatility. Perfect for casual outings, skate sessions, or adding
-              a bold edge to your everyday fit.
-            </p>
+          <div class="txt_wrap">
+            <div class="product_txt">
+              <h2>NIKE LOW DUNKS</h2>
+              <p>
+                Step into timeless street style with the Nike Low Dunks.
+                Designed with premium leather, a cushioned sole, and a sleek
+                low-cut silhouette, these sneakers deliver all-day comfort and
+                effortless versatility. Perfect for casual outings, skate
+                sessions, or adding a bold edge to your everyday fit.
+              </p>
+              <div class="price">
+                <p>PRICE: ₦<span id="price">27000</span></p>
+              </div>
 
-            <div class="qty">
-              <label for="qty">Quantity: &nbsp;</label>
-              <input type="number" id="qty" value="1" min="1" />
+              <div class="qty">
+                <label for="qty">Quantity: &nbsp;</label>
+                <input type="number" id="qty" value="1" min="1" />
+              </div>
+              <div class="price">
+                <p>TOTAL: ₦<span id="total">27000</span></p>
+              </div>
+
+              <div class="select_con">
+                <select id="size" required class="select">
+                  <option value="">Size</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                </select>
+
+                <select id="colour" required class="select">
+                  <option value="">Colour</option>
+                  <option value="black">Black</option>
+                  <option value="blue">Blue</option>
+                  <option value="grey">Grey</option>
+                </select>
+              </div>
             </div>
 
-            <div class="select_con">
-              <select id="size" required class="select">
-                <option value="">Size</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-              </select>
+            <div class="product_form">
+              <input
+                type="text"
+                placeholder="Full Name"
+                required
+                class="form"
+              />
+              <input
+                type="phone"
+                placeholder="+2348100000000"
+                required
+                class="form"
+              />
+              <input
+                type="email"
+                placeholder="youremail@mail.com"
+                id="customer_email"
+                required
+                class="form"
+              />
+              <input type="hidden" id="sku" value="SHS-NIKE-DUNKS" />
 
-              <select id="colour" required class="select">
-                <option value="">Colour</option>
-                <option value="black">Black</option>
-                <option value="blue">Blue</option>
-                <option value="grey">Grey</option>
-              </select>
+              <button id="pay-btn">BUY NOW</button>
             </div>
-          </div>
-
-          <div class="product_form">
-            <input type="text" placeholder="Full Name" required class="form" />
-            <input
-              type="text"
-              placeholder="+2348100000000"
-              required
-              class="form"
-            />
-            <input
-              type="email"
-              placeholder="youremail@mail.com"
-              required
-              class="form"
-            />
-            <input type="hidden" id="sku" value="SHS-NIKE-DUNKS" />
-
-            <button id="pay-btn">BUY NOW</button>
           </div>
         </div>
       </main>
@@ -135,12 +149,12 @@
         </div>
         <div class="link_wrap">
           <div class="links">
-            <a href="#">Shop <i class="ri-arrow-right-up-line"></i></a>
-            <a href="#"
+            <a href="/shop.html">Shop <i class="ri-arrow-right-up-line"></i></a>
+            <a href="/index.html#customer_care"
               >Refund & Return Policy<i class="ri-arrow-right-up-line"></i
             ></a>
-            <a href="#">Shipping <i class="ri-arrow-right-up-line"></i></a>
-            <a href="#"
+            <a href="/index.html#customer_care">Shipping <i class="ri-arrow-right-up-line"></i></a>
+            <a href="index.html#customer_care"
               >Privacy Notice <i class="ri-arrow-right-up-line"></i
             ></a>
           </div>
@@ -171,6 +185,8 @@
         >
       </footer>
     </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="shs-nike-dunks.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>
