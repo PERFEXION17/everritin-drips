@@ -65,7 +65,7 @@ payBtn.addEventListener("click", () => {
     },
     callback: function (response) {
       // redirect to thank you page with reference
-      window.location.href = "thankyou.html?reference=" + response.reference;
+      window.location.href = "/thankyou.html?reference=" + response.reference;
     },
     onClose: function () {
       alert("Transaction was not completed.");

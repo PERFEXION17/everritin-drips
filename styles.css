@@ -124,7 +124,7 @@ nav a {
     background-color: var(--neutral_color);
     color: var(--primary_color);
     border-radius: 1.5rem;
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin: 0 1rem 0 0;
     transition: .5s;
@@ -577,4 +577,70 @@ main{
     .card_con{
         grid-template-columns: repeat(5, 1fr);
     }
+}
+
+/* -----THANK YOU PAGE----- */
+
+.thank_con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thank_con h1{
+    font-family: var(--font_main);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px;
+    color: var(--primary_color);
+}
+
+.thank_box{
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    max-width: clamp(20rem, 80%, 27rem);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+}
+
+.thank_check{
+    font-size: 6rem;
+    text-align: center;
+    color: var(--primary_color);
+}
+
+.thank_box h2{
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.thank_box h3{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.thank_box p{
+    padding: 1rem;
+    text-align: center;
+}
+
+.thank_link{
+    /* background-color: var(--primary_color); */
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.thank_link a{
+    padding:.5rem 1rem ;
+    background-color: var(--primary_color);
+    color: var(--neutral_color);
+    border-radius: .5rem;
+    transition: .5s ease;
+}
+
+.thank_link a:hover{
+    background-color: var(--accent_color);
 }
