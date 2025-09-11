@@ -2,6 +2,8 @@
 const payBtn = document.getElementById("pay-btn");
 const quantityInput = document.getElementById("qty");
 const totalDisplay = document.getElementById("total");
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("customer_email");
 const skuInput = document.getElementById("sku"); // hidden field for SKU
 const sizeInput = document.getElementById("size"); // dropdown for size
@@ -25,6 +27,8 @@ payBtn.addEventListener("click", () => {
 
   let amount = unitPrice * quantity * 100; // Paystack uses Kobo
   let email = emailInput.value.trim();
+  let fullName = nameInput.value.trim();
+  let phone = phoneInput.value.trim();
   let sku = skuInput ? skuInput.value : "N/A";
   let size = sizeInput ? sizeInput.value : "N/A";
   let color = colorInput ? colorInput.value : "N/A";
@@ -41,6 +45,16 @@ payBtn.addEventListener("click", () => {
     currency: "NGN",
     metadata: {
       custom_fields: [
+        {
+          display_name: "Full Name",
+          variable_name: "full_name",
+          value: fullName,
+        },
+        {
+          display_name: "Phone Number",
+          variable_name: "phone_number",
+          value: phone,
+        },
         {
           display_name: "SKU",
           variable_name: "sku",

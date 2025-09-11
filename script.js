@@ -52,9 +52,6 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-
-// -----shop list details-----
-
 // -----img slider----
 
 var mainImage = document.getElementById("main_image")
