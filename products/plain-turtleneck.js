@@ -1,31 +1,27 @@
-// Grab elements
 const payBtn = document.getElementById("pay-btn");
 const quantityInput = document.getElementById("qty");
 const totalDisplay = document.getElementById("total");
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("customer_email");
-const skuInput = document.getElementById("sku"); // hidden field for SKU
-const sizeInput = document.getElementById("size"); // dropdown for size
-const colorInput = document.getElementById("colour"); // dropdown for color
+const skuInput = document.getElementById("sku");
+const sizeInput = document.getElementById("size");
+const colorInput = document.getElementById("colour");
 
-// Product unit price
-const unitPrice = 8000; // in Naira
+const unitPrice = 8000;
 
-// Update total price live
 quantityInput.addEventListener("input", () => {
   let quantity = parseInt(quantityInput.value) || 1;
-  if (quantity < 1) quantity = 1; // prevent zero or negative
+  if (quantity < 1) quantity = 1;
   let total = unitPrice * quantity;
-  totalDisplay.textContent = total.toLocaleString(); // formatted number
+  totalDisplay.textContent = total.toLocaleString();
 });
 
-// Handle Paystack checkout
 payBtn.addEventListener("click", () => {
   let quantity = parseInt(quantityInput.value) || 1;
   if (quantity < 1) quantity = 1;
 
-  let amount = unitPrice * quantity * 100; // Paystack uses Kobo
+  let amount = unitPrice * quantity * 100;
   let email = emailInput.value.trim();
   let fullName = nameInput.value.trim();
   let phone = phoneInput.value.trim();
@@ -39,7 +35,7 @@ payBtn.addEventListener("click", () => {
   }
 
   let handler = PaystackPop.setup({
-    key: "pk_test_d20590ef86fe4669a36f97288826af15ca69c90b", // 🔑 replace with your test/live public key
+    key: "pk_test_d20590ef86fe4669a36f97288826af15ca69c90b",
     email: email,
     amount: amount,
     currency: "NGN",
@@ -78,7 +74,6 @@ payBtn.addEventListener("click", () => {
       ],
     },
     callback: function (response) {
-      // redirect to thank you page with reference
       window.location.href = "/thankyou.html?reference=" + response.reference;
     },
     onClose: function () {
