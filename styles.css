@@ -148,10 +148,11 @@ nav a {
 .con {
     width: 50%;
     margin: auto;
-    background: radial-gradient(circle at top left, #F3F4F6, #06B6D4 100%);
+    /* background: radial-gradient(circle at top left, #F3F4F6, #06B6D4 100%); */
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 1px 1px 20px var(--primary_color);
+    background-color: var(--accent_color);
 }
 
 .con_img {
@@ -533,8 +534,8 @@ main{
 
 .card_price{
     padding: 0 .5rem;
-    font-family: var(--font_price);
-    font-weight: 500;
+    font-family: var(--font_sec);
+    font-weight: 600;
     color: var(--primary_color);
 }
 

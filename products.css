@@ -59,7 +59,7 @@ img{
     margin: 1rem auto;
     font-size: 2rem;
     font-weight: 800;
-    color: var(--accent_color);
+    color: var(--primary_color);
     text-shadow: 1px 1px 1px;
 }
 
@@ -99,6 +99,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 1rem;
 }
 
 .select{
@@ -142,7 +143,7 @@ img{
 #pay-btn{
     border: none;
     font-family: var(--font_sec);
-    background-color: var(--accent_color);
+    background-color: var(--primary_color);
     margin: 1rem auto;
     border-radius: .5rem;
     font-weight: 600;
@@ -154,7 +155,7 @@ img{
 }
 
 #pay-btn:hover{
-    background-color: var(--primary_color);
+    background-color: var(--accent_color);
 }
 
 .price{
@@ -171,13 +172,12 @@ img{
     padding: 0;
     margin: 0;
     font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--accent_color);
-    text-shadow: 1px 1px 1px var(--primary_color); 
+    font-weight: 800;
+    color: var(--primary_color);
 }
 
 .price span{
-    font-family: var(--font_price);
+    font-family: var(--font_sec);
 }
 
 .note{

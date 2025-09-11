@@ -1,0 +1,89 @@
+// Grab elements
+const payBtn = document.getElementById("pay-btn");
+const quantityInput = document.getElementById("qty");
+const totalDisplay = document.getElementById("total");
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
+const emailInput = document.getElementById("customer_email");
+const skuInput = document.getElementById("sku"); // hidden field for SKU
+const sizeInput = document.getElementById("size"); // dropdown for size
+const colorInput = document.getElementById("colour"); // dropdown for color
+
+// Product unit price
+const unitPrice = 8000; // in Naira
+
+// Update total price live
+quantityInput.addEventListener("input", () => {
+  let quantity = parseInt(quantityInput.value) || 1;
+  if (quantity < 1) quantity = 1; // prevent zero or negative
+  let total = unitPrice * quantity;
+  totalDisplay.textContent = total.toLocaleString(); // formatted number
+});
+
+// Handle Paystack checkout
+payBtn.addEventListener("click", () => {
+  let quantity = parseInt(quantityInput.value) || 1;
+  if (quantity < 1) quantity = 1;
+
+  let amount = unitPrice * quantity * 100; // Paystack uses Kobo
+  let email = emailInput.value.trim();
+  let fullName = nameInput.value.trim();
+  let phone = phoneInput.value.trim();
+  let sku = skuInput ? skuInput.value : "N/A";
+  let size = sizeInput ? sizeInput.value : "N/A";
+  let color = colorInput ? colorInput.value : "N/A";
+
+  if (!email) {
+    alert("Please enter your email before proceeding.");
+    return;
+  }
+
+  let handler = PaystackPop.setup({
+    key: "pk_test_d20590ef86fe4669a36f97288826af15ca69c90b", // 🔑 replace with your test/live public key
+    email: email,
+    amount: amount,
+    currency: "NGN",
+    metadata: {
+      custom_fields: [
+        {
+          display_name: "Full Name",
+          variable_name: "full_name",
+          value: fullName,
+        },
+        {
+          display_name: "Phone Number",
+          variable_name: "phone_number",
+          value: phone,
+        },
+        {
+          display_name: "SKU",
+          variable_name: "sku",
+          value: sku,
+        },
+        {
+          display_name: "Size",
+          variable_name: "size",
+          value: size,
+        },
+        {
+          display_name: "Color",
+          variable_name: "color",
+          value: color,
+        },
+        {
+          display_name: "Quantity",
+          variable_name: "quantity",
+          value: quantity,
+        },
+      ],
+    },
+    callback: function (response) {
+      // redirect to thank you page with reference
+      window.location.href = "/thankyou.html?reference=" + response.reference;
+    },
+    onClose: function () {
+      alert("Transaction was not completed.");
+    },
+  });
+  handler.openIframe();
+});
