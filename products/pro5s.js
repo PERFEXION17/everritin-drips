@@ -29,12 +29,12 @@ payBtn.addEventListener("click", () => {
   let size = sizeInput ? sizeInput.value : "N/A";
   let color = colorInput ? colorInput.value : "N/A";
 
-  if (!email) {
-    alert("Please enter your Email Address before proceeding.");
-    return;
-  }
   if (!fullName) {
     alert("Please enter your Full Name before proceeding.");
+    return;
+  }
+  if (!email) {
+    alert("Please enter your Email Address before proceeding.");
     return;
   }
   if (!phone) {

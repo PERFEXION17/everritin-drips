@@ -8,7 +8,7 @@ const skuInput = document.getElementById("sku");
 const sizeInput = document.getElementById("size");
 const colorInput = document.getElementById("colour");
 
-const unitPrice = 8000;
+const unitPrice = 10500;
 
 quantityInput.addEventListener("input", () => {
   let quantity = parseInt(quantityInput.value) || 1;
@@ -29,12 +29,12 @@ payBtn.addEventListener("click", () => {
   let size = sizeInput ? sizeInput.value : "N/A";
   let color = colorInput ? colorInput.value : "N/A";
 
-  if (!email) {
-    alert("Please enter your Email Address before proceeding.");
-    return;
-  }
   if (!fullName) {
     alert("Please enter your Full Name before proceeding.");
+    return;
+  }
+  if (!email) {
+    alert("Please enter your Email Address before proceeding.");
     return;
   }
   if (!phone) {

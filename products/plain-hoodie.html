@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/products.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>EVERRITIN DRIPS</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <div class="logo">
+            <a href="#">EVERRITIN DRIPS</a
+            ><i id="menu_icon" class="ri-menu-4-fill"></i>
+          </div>
+          <ul id="menu" class="menu_list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/shop.html#shoes">Shoes</a></li>
+            <li><a href="/shop.html#clothing">Clothing</a></li>
+            <li><a href="/shop.html#footwear">Footwears</a></li>
+            <li><a href="/shop.html#phone">Phone Accessories</a></li>
+            <li><a href="/shop.html#cloth">Clothing Accessories</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="product_con">
+          <div class="product_img">
+            <div class="p_img_main">
+              <img
+                src="/assets/hood_black.png"
+                alt="Black Plain Hoodie"
+                id="main_image"
+              />
+            </div>
+            <div class="p_img_small">
+              <div>
+                <img
+                  src="/assets/hood_black.png"
+                  alt="Black Plain Hoodie"
+                  class="small_image"
+                />
+              </div>
+              <div>
+                <img
+                  src="/assets/hood_navyblue.png"
+                  alt="Navy-blue Plain Hoodie"
+                  class="small_image"
+                />
+              </div>
+              <div>
+                <img
+                  src="/assets/hood_white.png"
+                  alt="White Plain Hoodie"
+                  class="small_image"
+                />
+              </div>
+              <div>
+                <img
+                  src="/assets/hood_red.png"
+                  alt="Red Plain Hoodie"
+                  class="small_image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="txt_wrap">
+            <div class="product_txt">
+              <h2>PLAIN HOODIE</h2>
+              <p>
+                Stay cozy and stylish with our plain hoodies, designed for ultimate comfort and versatility. Made from soft, durable fabric with a relaxed fit, they feature a minimalist design that pairs effortlessly with any outfit. Perfect for layering, lounging, or stepping out in casual style.
+              </p>
+              <div class="price">
+                <p>PRICE: ₦<span id="price">8000</span></p>
+              </div>
+
+              <div class="qty">
+                <label for="qty">Quantity: &nbsp;</label>
+                <input type="number" id="qty" value="1" min="1" />
+              </div>
+              <div class="price">
+                <p>TOTAL: ₦<span id="total">8000</span></p>
+              </div>
+
+              <div class="select_con">
+                <select id="size" required class="select">
+                  <option value="">Size</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="3XL">3XL</option>
+                </select>
+
+                <select id="colour" required class="select">
+                  <option value="">Colour</option>
+                  <option value="Black">Black</option>
+                  <option value="Navy-blue">Navy-Blue</option>
+                  <option value="White">White</option>
+                  <option value="Red">Red</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="product_form">
+              <input
+                type="text"
+                placeholder="Full Name"
+                required
+                class="form"
+                id="name"
+              />
+              <input
+                type="phone"
+                placeholder="+2348100000000"
+                required
+                class="form"
+                id="phone"
+              />
+              <input
+                type="email"
+                placeholder="youremail@mail.com"
+                id="customer_email"
+                required
+                class="form"
+              />
+              <input type="hidden" id="sku" value="CLC-PLAIN-HOOD" />
+
+              <button id="pay-btn">BUY NOW</button>
+            </div>
+
+            <div class="note">
+              <p>
+                Please ensure you fill the form above approriately and correctly
+                to enable us process your order effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="logo"><a href="#">EVERRITIN DRIPS</a></div>
+        <div class="news">
+          <p>Subscribe to our newsletter</p>
+          <input class="news_text" type="email" id="letter" name="letter" />
+          <label for="letter"><button>Send</button></label>
+        </div>
+        <div class="link_wrap">
+          <div class="links">
+            <a href="/shop.html">Shop <i class="ri-arrow-right-up-line"></i></a>
+            <a href="/index.html#customer_care"
+              >Refund & Return Policy<i class="ri-arrow-right-up-line"></i
+            ></a>
+            <a href="/index.html#customer_care"
+              >Shipping <i class="ri-arrow-right-up-line"></i
+            ></a>
+            <a href="index.html#customer_care"
+              >Privacy Notice <i class="ri-arrow-right-up-line"></i
+            ></a>
+          </div>
+          <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://wa.me/+2348130119358" target="_blank"
+              ><i class="ri-whatsapp-line"></i>&nbsp;<span
+                >+2348130119358</span
+              ></a
+            >
+            <a
+              href="mailto:ikechukwujude058@gmail.com
+"
+              ><i class="ri-mail-line"></i>&nbsp;<span
+                >ikechukwujude058@gmail.com</span
+              ></a
+            >
+            <p>
+              <i class="ri-phone-line"></i>
+              <span>+2348130119358 &nbsp; +2349151135388</span>
+            </p>
+          </div>
+        </div>
+        <span
+          ><p>
+            &copy 2025 Everritin Drips | PERFEXION INC. All Rights Reserved
+          </p></span
+        >
+      </footer>
+    </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="plain-hoodies.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

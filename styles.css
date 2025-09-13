@@ -544,6 +544,12 @@ main{
     color: var(--primary_color);
 }
 
+@media (min-width: 600px) and (max-width : 900px){
+    .card_con{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (min-width : 900px) {
 
     .logo i{

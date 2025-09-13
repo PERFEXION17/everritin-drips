@@ -34,7 +34,15 @@ payBtn.addEventListener("click", () => {
   let color = colorInput ? colorInput.value : "N/A";
 
   if (!email) {
-    alert("Please enter your email before proceeding.");
+    alert("Please enter your Email Address before proceeding.");
+    return;
+  }
+  if (!fullName) {
+    alert("Please enter your Full Name before proceeding.");
+    return;
+  }
+  if (!phone) {
+    alert("Please enter your Phone Number before proceeding.");
     return;
   }
 
