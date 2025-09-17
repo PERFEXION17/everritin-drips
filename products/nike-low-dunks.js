@@ -47,7 +47,7 @@ payBtn.addEventListener("click", () => {
   }
 
   let handler = PaystackPop.setup({
-    key: "pk_test_d20590ef86fe4669a36f97288826af15ca69c90b", // 🔑 replace with your test/live public key
+    key: "pk_live_e306b704744f3a734dcab878d7a19d674ac82f39", // 🔑 replace with your test/live public key
     email: email,
     amount: amount,
     currency: "NGN",
